@@ -19,7 +19,7 @@
     <link href="{{ url('theme-sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="{{ url('theme-sbadmin/css/sb-admin.css" rel="stylesheet') }}">
+    <link href="{{ url('theme-sbadmin/css/sb-admin.css') }}" rel="stylesheet">
 
   </head>
 

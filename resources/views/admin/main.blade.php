@@ -19,24 +19,25 @@
     <link href="{{url('theme-sbadmin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="{{url('theme-sbadmin/vendor/css/sb-admin.css')}}" rel="stylesheet">
+    <link href="{{url('theme-sbadmin/css/sb-admin.css')}}" rel="stylesheet">
     @stack('css')
 
   </head>
 
   <body id="page-top">
-
     @include('admin.navbar')
+    
+     
 
     <div id="wrapper">
 
       <!-- Sidebar -->
-       @include('admin.sidebar')
-
-
+     @include('admin.sidebar')
       <div id="content-wrapper">
 
         <div class="container-fluid">
+          
+
           <!-- Page Content -->
           @yield('content')
 
@@ -44,7 +45,7 @@
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
-        @include('admin.footer')
+      @include('admin.footer')
 
       </div>
       <!-- /.content-wrapper -->
@@ -62,14 +63,13 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{url('theme-sbadmin/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{(url('theme-sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js'))}}"></script>
+    <script src="{{url('theme-sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="{{url('theme-sbadmin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="{{url('theme-sbadmin/js/sb-admin.min.js')}}"></script>
-    <script type="text/javascript" src="{{url('theme-sbadmin/navbar-nav.js')}}"></script>
     @stack('js')
   </body>
 
