@@ -4,6 +4,15 @@
 <h1>Kategori</h1>
 <hr>
 
+@if( session('result') == 'success')
+<div class="alert alert-success alert-dismissible fade show">
+	<strong>saved!</strong> Berhasil disimpan
+	<button type="button" class="close" data-dismiss="alert">
+		&times;		
+	</button>
+</div>
+@endif
+
 <div class="row">
 	<div class="col-md-6 mb-3">
 		<a href="{{ route('admin.kategori.add') }}" class="btn btn-primary">[+] Tambah</a>
@@ -31,11 +40,12 @@
 	@foreach($data as $dt)
 	<tr>
 		<td>{{ $dt->nama_kategori }}</td>
-		<td>
-			<a href="#" class="btn btn-success btn-sm">
+		<td> 
+			<a href="{{route('admin.kategori.edit',['id'=>$dt->id])}}"
+			class="btn btn-success btn-sm">
 				<i class="fa fa-w fa-edit"></i>
 			</a>
-			<button type="button" class="btn-danger btn-sm">
+			<button type="button" class="btn btn-danger btn-sm">
 				<i class="fa fa-w fa-trash"></i>
 			</button>
 		</td>
